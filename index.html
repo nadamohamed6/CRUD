@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container ">
+        <div class="mx-auto w-75 pt-5 mb-3">
+            <h1>Product Managment System</h1>
+
+            <div>
+                <label for="productName" class="d-block pb-2 pt-2 ">productName:</label>
+                <input id="productName" class=" form-control" type="text" placeholder="Enter Name">
+            </div>
+            <div>
+                <label for="productPrice" class="d-block pb-2 pt-2">productPrice:</label>
+                <input id="productPrice" class=" form-control" type="number" placeholder="Enter Price">
+            </div>
+            <div>
+                <label for="productModel" class="d-block pb-2 pt-2">productModel:</label>
+                <input id="productModel" class=" form-control" type="text" placeholder="Enter Model">
+            </div>
+            <div>
+
+                <label for="productDesc" class="d-block pb-2 pt-2">productDesc:</label>
+                <textarea id="productDesc" class=" d-block mb-4 form-control" placeholder="Enter desc"></textarea>
+            </div>
+            <div>
+                <button onclick="addProduct()" class="btn btn-primary" id="addProductbtn">Add Product</button>
+                <button onclick="updateProductNewValue()" class="btn btn-primary d-none" id="updateProductbtn">Update Product</button>
+            </div>
+        </div>
+
+        <div class="mx-auto w-75 pt-5 mb-3">
+            <h4>Search</h4>
+            <input onInput="searchByName(this.value)" type="text" id="searchInput" class="form-control">
+        </div>
+
+
+
+
+<table class="table w-75 mx-auto pt-5 text-white text-center">
+    <thead>
+        <th>index</th>
+        <th>productName</th>
+        <th>productPrice</th>
+        <th>productModel</th>
+        <th>productDesc</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </thead>
+    <tbody id="tBody">
+        <!-- <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>
+                <button class="btn btn-warning btn-sm">Update</button>
+            </td>
+            <td>
+                <button class="btn btn-danger btn-sm">delete</button>
+            </td>
+
+        </tr> -->
+    </tbody>
+</table>
+
+
+
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
